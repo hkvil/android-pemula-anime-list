@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -41,6 +42,7 @@ class WaifuAdapter(val list: ArrayList<Waifu>) :
                 putExtra("data", list[position])
             }
             context.startActivity(intent)
+            //Toast.makeText(context,list[position].waifuIntro,Toast.LENGTH_LONG).show()
         }
     }
 

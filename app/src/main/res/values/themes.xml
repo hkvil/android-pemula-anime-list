@@ -9,6 +9,21 @@
         <item name="android:textColorSecondary">#757575</item>
         <item name="dividerColor">#BDBDBD</item>
         <item name="actionBarStyle">@style/Widget.MaterialComponents.ActionBar.Primary</item>
+        <!-- SplashScreen -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">#8BC34A -->
+        <item name="colorPrimary">#8BC34A</item>
+        <item name="colorAccent">#00BCD4</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#757575</item>
+        <item name="dividerColor">#BDBDBD</item>
+        <item name="actionBarStyle">@style/Widget.MaterialComponents.ActionBar.Primary</item>
+        <!-- SplashScreen -->
+        <item name="android:statusBarColor">@color/white</item>
     </style>
 
     <style name="Theme.DicodingAndroidPemulaSubmission" parent="Base.Theme.DicodingAndroidPemulaSubmission" />

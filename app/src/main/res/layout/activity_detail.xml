@@ -1,9 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_view_waifu"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+            tools:src="@drawable/asuna_yuki" />
+
+        <TextView
+            android:id="@+id/text_view_personal_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="PERSONAL INFORMATION"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view_waifu" />
+
+        <View
+            android:id="@+id/line_divider_personal_information"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/text_view_personal_information" />
+
+        <TableLayout
+            android:id="@+id/table_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_divider_personal_information">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Name" />
+
+                <TextView
+                    android:id="@+id/text_view_waifu_name"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    tools:text="Yuki Asuna" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Age" />
+
+                <TextView
+                    android:id="@+id/text_view_waifu_age"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    tools:text="19" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Anime" />
+
+                <TextView
+                    android:id="@+id/text_view_waifu_anime_title"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    tools:text="Sword Art Online" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Birthday" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_waifu_birthday"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    tools:text="September 10" />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/text_view_voice_actor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Voice Actor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table_personal" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_view_voice_actor"
+            app:layout_constraintHorizontal_bias="0.6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/haruka_tomatsu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table_personal"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+        <TextView
+
+            android:id="@+id/text_view_introduction_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="INTRODUCTION"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view_voice_actor" />
+
+        <TextView
+            android:id="@+id/text_view_voice_actor_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Haruka Tomatsu"
+            app:layout_constraintStart_toStartOf="@id/image_view_voice_actor"
+            app:layout_constraintTop_toBottomOf="@id/image_view_voice_actor" />
+
+        <View
+            android:id="@+id/line_divider_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/text_view_introduction_heading" />
+
+        <TextView
+            android:id="@+id/text_view_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Introduction here"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_divider_introduction" />
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/action_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SHARE AGAR DAPAT WAIFU"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_introduction" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
