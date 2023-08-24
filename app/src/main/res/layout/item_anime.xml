@@ -1,6 +1,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +17,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:contentDescription="Anime image" />
 
         <TextView
@@ -25,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Title"
+            android:text="Name"
             app:layout_constraintStart_toStartOf="parent"
             style="?attr/textAppearanceHeadline6"
             />
@@ -35,9 +36,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="?attr/textAppearanceBody2"
-            android:text="Secondary Text"
+            android:text="From Anime"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_view_tite"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
